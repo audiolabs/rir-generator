@@ -1,5 +1,8 @@
 # rir_generator
 
+[![Documentation Status](https://readthedocs.org/projects/rir-generator/badge/?version=latest)](https://rir-generator.readthedocs.io/en/latest/?badge=latest)
+[![Build Status](https://travis-ci.org/audiolabs/rir-generator.svg?branch=master)](https://travis-ci.org/audiolabs/rir-generator)
+
 This is a python port of the RIR-Generator code from https://github.com/ehabets/RIR-Generator
 
 This package contains:
