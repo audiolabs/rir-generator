@@ -80,7 +80,6 @@ def beta(reverberation_time_beta):
         rir_generator.mtype.omnidirectional,
         rir_generator.mtype.o,
         rir_generator.mtype.hypercardioid,
-        rir_generator.mtype.h,
     ]
 )
 def mtype(request):
@@ -97,7 +96,7 @@ def dim(request):
     return request.param
 
 
-@pytest.fixture(params=[0, np.array([np.pi / 2, 0])])
+@pytest.fixture(params=[0, [np.pi / 2, 0]])
 def orientation(request):
     return request.param
 
