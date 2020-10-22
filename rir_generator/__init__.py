@@ -55,7 +55,7 @@ def generate(
 
         .. code-block::
 
-            [beta_x1, beta_x2, beta_y1, beta_y2, beta_z1, beta_z2]`
+            [beta_x1, beta_x2, beta_y1, beta_y2, beta_z1, beta_z2]
 
         or
 
