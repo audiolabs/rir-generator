@@ -3,7 +3,9 @@
 [![Documentation Status](https://readthedocs.org/projects/rir-generator/badge/?version=latest)](https://rir-generator.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://travis-ci.org/audiolabs/rir-generator.svg?branch=master)](https://travis-ci.org/audiolabs/rir-generator)
 
-This is a Python port of the RIR-Generator code from https://github.com/ehabets/RIR-Generator
+Python- and C-based [room impulse response](https://en.wikipedia.org/wiki/Impulse_response#Acoustic_and_audio_applications) generator, for use in [convolutional reverb](https://en.wikipedia.org/wiki/Convolution_reverb).
+
+Ported from https://github.com/ehabets/RIR-Generator.
 
 ## Installation
 
