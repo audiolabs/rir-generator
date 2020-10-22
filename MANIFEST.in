@@ -1,0 +1,1 @@
+recursive-include rir_generator/_rir *.cpp *.h
