@@ -12,32 +12,19 @@
 
 stages:
   - tests
-  - docs
-
-test:3.5:
-  image: python:3.5
-  <<: *job_definition
 
 test:3.6:
   image: python:3.6
   <<: *job_definition
 
+test:3.7:
+  image: python:3.7
+  <<: *job_definition
+
+test:3.8:
+  image: python:3.8
+  <<: *job_definition
+
 test:latest:
   image: python:latest
   <<: *job_definition
-
-pages:
-  image: python:latest
-  <<: *job_definition
-  stage: docs
-  script:
-    - python setup.py build_sphinx
-    - python setup.py sdist
-    - mkdir public
-    - mv dist/*.tar.gz public/
-    - mv build/sphinx/html/* public/
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
