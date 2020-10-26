@@ -12,6 +12,8 @@ Room Impulse Response Generator
     :target: https://rir-generator.readthedocs.io/en/latest/?badge=latest
 .. image:: https://travis-ci.org/audiolabs/rir-generator.svg?branch=master
     :target: https://travis-ci.org/audiolabs/rir-generator
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4133078.svg
+   :target: https://doi.org/10.5281/zenodo.4133078
 
 Python- and C-based `room impulse response`_ generator, for use in `convolutional reverb`_.
 
