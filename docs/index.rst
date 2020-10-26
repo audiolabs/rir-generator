@@ -17,6 +17,8 @@ Room Impulse Response Generator
 
 Python- and C-based `room impulse response`_ generator, for use in `convolutional reverb`_.
 
+Official Python port of https://github.com/ehabets/RIR-Generator.
+
 Example
 -------
 

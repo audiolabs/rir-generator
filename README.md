@@ -6,7 +6,7 @@
 
 Python- and C-based [room impulse response](https://en.wikipedia.org/wiki/Impulse_response#Acoustic_and_audio_applications) generator, for use in [convolutional reverb](https://en.wikipedia.org/wiki/Convolution_reverb).
 
-Ported from https://github.com/ehabets/RIR-Generator.
+Official Python port of https://github.com/ehabets/RIR-Generator.
 
 ## Installation
 
