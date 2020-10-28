@@ -2,7 +2,7 @@
 
 [![Documentation Status](https://readthedocs.org/projects/rir-generator/badge/?version=latest)](https://rir-generator.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://travis-ci.org/audiolabs/rir-generator.svg?branch=master)](https://travis-ci.org/audiolabs/rir-generator)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4133078.svg)](https://doi.org/10.5281/zenodo.4133078)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4133077.svg)](https://doi.org/10.5281/zenodo.4133077)
 
 Python- and C-based [room impulse response](https://en.wikipedia.org/wiki/Impulse_response#Acoustic_and_audio_applications) generator, for use in [convolutional reverb](https://en.wikipedia.org/wiki/Convolution_reverb).
 
