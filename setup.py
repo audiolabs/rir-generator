@@ -6,7 +6,7 @@ import setuptools
 if __name__ == "__main__":
     setuptools.setup(
         name="rir-generator",
-        version="0.1.0",
+        version="0.2.0",
         description="Room Impulse Response Generator.",
         author="Nils Werner",
         author_email="nils.werner@fau.de",
@@ -19,7 +19,7 @@ if __name__ == "__main__":
             "cffi>=1.1.0",
         ],
         cffi_modules=[
-            "rir_generator/build.py:rir_generator",
+            "rir_generator/_rir/build.py:rir_generator",
         ],
         extras_require={
             "tests": [
@@ -40,5 +40,4 @@ if __name__ == "__main__":
             ],
         },
         zip_safe=False,
-        include_package_data=True,
     )
