@@ -5,7 +5,7 @@ from . import rir
 
 
 class mtype(Enum):
-    """ Microphone type. """
+    """Microphone type."""
 
     bidirectional = b"b"
     b = b"b"
@@ -150,7 +150,7 @@ def generate(
     A = L[::-1] * np.roll(L[::-1], 1)
 
     if beta is not None:
-        alpha = np.sum(np.sum(1 - beta ** 2, axis=1) * np.sum(A))
+        alpha = np.sum(np.sum(1 - beta**2, axis=1) * np.sum(A))
 
         reverberation_time = max(
             24 * np.log(10.0) * V / (c * alpha),
