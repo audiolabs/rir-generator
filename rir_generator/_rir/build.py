@@ -5,7 +5,6 @@ from cffi import FFI
 rir_generator = FFI()
 
 compile_extras = {
-    "extra_compile_args": ["-march=native"],
     "libraries": ["m"],
 }
 
