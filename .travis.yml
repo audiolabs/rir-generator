@@ -15,3 +15,4 @@ script:
     - py.test
     - python setup.py build_sphinx
     - python setup.py egg_info -b.dev sdist --formats gztar
+    - python setup.py bdist_wheel
