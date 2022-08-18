@@ -33,7 +33,7 @@ import sphinx_rtd_theme
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.imgmath",
-    "sphinxcontrib.napoleon",
+    'sphinx.ext.napoleon',
     "sphinx.ext.autosummary",
     "sphinxcontrib.bibtex",
     "numpydoc",
@@ -273,3 +273,7 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 # texinfo_no_detailmenu = False
+
+bibtex_bibfiles = [
+    'refs.bib'
+]
