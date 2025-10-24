@@ -1,1 +1,3 @@
-recursive-include rir_generator/_rir *.cpp *.h *.py
+include README.md LICENSE
+recursive-include src/rir_generator/_cffi *.cpp *.h *.py
+global-exclude __pycache__ *.py[cod] *.so *.dylib

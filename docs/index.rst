@@ -10,8 +10,8 @@ Room Impulse Response Generator
 
 .. image:: https://readthedocs.org/projects/rir-generator/badge/?version=latest
     :target: https://rir-generator.readthedocs.io/en/latest/?badge=latest
-.. image:: https://travis-ci.org/audiolabs/rir-generator.svg?branch=master
-    :target: https://travis-ci.org/audiolabs/rir-generator
+.. image:: https://github.com/audiolabs/rir-generator/actions/workflows/python-package.yml/badge.svg
+    :target: https://github.com/audiolabs/rir-generator/actions/workflows/python-package.yml
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4133077.svg
    :target: https://doi.org/10.5281/zenodo.4133077
 

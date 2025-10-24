@@ -1,5 +1,28 @@
+# Read the Docs configuration file for rir-generator
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+version: 2
+
+# Build documentation with MkDocs or Sphinx
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.11"
+  jobs:
+    post_checkout:
+      # Fetch git tags for setuptools-scm versioning
+      - git fetch --unshallow || true
+      - git fetch --tags || true
+
+# Python configuration
 python:
-    pip_install: true
-    extra_requirements:
-        - tests
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
         - docs
+
+# Sphinx configuration
+sphinx:
+  configuration: docs/conf.py
+  fail_on_warning: false

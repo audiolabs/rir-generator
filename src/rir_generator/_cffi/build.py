@@ -1,5 +1,5 @@
+"""CFFI build script for rir_generator C++ extension."""
 import os
-import sys
 from cffi import FFI
 
 rir_generator = FFI()
@@ -9,14 +9,17 @@ compile_extras = {
 }
 
 # MSVC does not like -march=native -lm
+import sys
 if sys.platform == "win32":
     compile_extras = {}
 
+# Use relative path from project root
+# During build, sources should be relative to setup.py location
 rir_generator.set_source(
-    "rir_generator.rir",
+    "rir_generator._rir",
     '#include "rir_generator_core.h"',
-    sources=["rir_generator/_rir/rir_generator_core.cpp"],
-    include_dirs=["rir_generator/_rir"],
+    sources=["src/rir_generator/_cffi/rir_generator_core.cpp"],
+    include_dirs=["src/rir_generator/_cffi"],
     **compile_extras
 )
 

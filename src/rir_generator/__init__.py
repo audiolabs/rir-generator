@@ -1,7 +1,21 @@
 from __future__ import division
 import numpy as np
 from enum import Enum
-from . import rir
+from . import _rir
+
+# Version information - provided by setuptools-scm
+try:
+    from ._version import __version__
+except ImportError:
+    # Fallback for development installations without git
+    try:
+        from importlib.metadata import version, PackageNotFoundError
+        try:
+            __version__ = version("rir-generator")
+        except PackageNotFoundError:
+            __version__ = "unknown"
+    except ImportError:
+        __version__ = "unknown"
 
 
 class mtype(Enum):
@@ -191,14 +205,14 @@ def generate(
 
     imp = np.zeros((nsample, numMics), dtype=np.double)
 
-    p_imp = rir.ffi.cast("double*", rir.ffi.from_buffer(imp))
-    p_r = rir.ffi.cast("double*", rir.ffi.from_buffer(r))
-    p_s = rir.ffi.cast("double*", rir.ffi.from_buffer(s))
-    p_L = rir.ffi.cast("double*", rir.ffi.from_buffer(L))
-    p_beta = rir.ffi.cast("double*", rir.ffi.from_buffer(beta))
-    p_orientation = rir.ffi.cast("double*", rir.ffi.from_buffer(orientation))
+    p_imp = _rir.ffi.cast("double*", _rir.ffi.from_buffer(imp))
+    p_r = _rir.ffi.cast("double*", _rir.ffi.from_buffer(r))
+    p_s = _rir.ffi.cast("double*", _rir.ffi.from_buffer(s))
+    p_L = _rir.ffi.cast("double*", _rir.ffi.from_buffer(L))
+    p_beta = _rir.ffi.cast("double*", _rir.ffi.from_buffer(beta))
+    p_orientation = _rir.ffi.cast("double*", _rir.ffi.from_buffer(orientation))
 
-    rir.lib.computeRIR(
+    _rir.lib.computeRIR(
         p_imp,
         float(c),
         float(fs),

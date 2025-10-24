@@ -1,7 +1,9 @@
 # Room Impulse Response Generator
 
 [![Documentation Status](https://readthedocs.org/projects/rir-generator/badge/?version=latest)](https://rir-generator.readthedocs.io/en/latest/?badge=latest)
-[![Build Status](https://travis-ci.org/audiolabs/rir-generator.svg?branch=master)](https://travis-ci.org/audiolabs/rir-generator)
+[![CI Tests](https://github.com/audiolabs/rir-generator/actions/workflows/python-package.yml/badge.svg)](https://github.com/audiolabs/rir-generator/actions/workflows/python-package.yml)
+[![PyPI version](https://badge.fury.io/py/rir-generator.svg)](https://badge.fury.io/py/rir-generator)
+[![Python versions](https://img.shields.io/pypi/pyversions/rir-generator.svg)](https://pypi.org/project/rir-generator/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4133077.svg)](https://doi.org/10.5281/zenodo.4133077)
 
 Python- and C-based [room impulse response](https://en.wikipedia.org/wiki/Impulse_response#Acoustic_and_audio_applications) generator, for use in [convolutional reverb](https://en.wikipedia.org/wiki/Convolution_reverb).
@@ -45,4 +47,40 @@ print(signal.shape)         # (11462, 2)
 signal = ss.convolve(h[:, None, :], signal[:, :, None])
 
 print(signal.shape)         # (15557, 2, 3)
+```
+
+## Development
+
+### Installation for Development
+
+```sh
+git clone https://github.com/audiolabs/rir-generator.git
+cd rir-generator
+pip install -e .[dev]
+```
+
+### Running Tests
+
+```sh
+pytest
+```
+
+### Building from Source
+
+```sh
+python -m build
+```
+
+### Project Structure
+
+The project follows the `src/` layout with **automatic versioning from git tags**:
+
+```
+src/
+  rir_generator/
+    __init__.py           # Main Python module
+    _cffi/                # CFFI C++ extension bindings
+      build.py            # CFFI build configuration
+      rir_generator_core.cpp  # C++ implementation
+      rir_generator_core.h    # C++ header
 ```
