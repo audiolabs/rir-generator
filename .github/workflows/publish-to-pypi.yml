@@ -31,8 +31,8 @@ jobs:
           CIBW_BUILD: cp38-* cp39-* cp310-* cp311-* cp312-*
           # Skip 32-bit builds and musl builds
           CIBW_SKIP: "*-win32 *-manylinux_i686 *-musllinux_*"
-          # Install dependencies
-          CIBW_BEFORE_BUILD: pip install -U pip setuptools wheel cffi
+          # Install dependencies (use python -m pip for Windows compatibility)
+          CIBW_BEFORE_BUILD: python -m pip install -U setuptools wheel cffi
           # Run tests after build
           CIBW_TEST_REQUIRES: pytest pytest-cov numpy scipy
           CIBW_TEST_COMMAND: pytest {project}/tests -v
