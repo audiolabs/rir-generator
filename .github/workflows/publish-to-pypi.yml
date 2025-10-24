@@ -34,7 +34,7 @@ jobs:
           # Install dependencies
           CIBW_BEFORE_BUILD: pip install -U pip setuptools wheel cffi
           # Run tests after build
-          CIBW_TEST_REQUIRES: pytest numpy scipy
+          CIBW_TEST_REQUIRES: pytest pytest-cov numpy scipy
           CIBW_TEST_COMMAND: pytest {project}/tests -v
       
       - uses: actions/upload-artifact@v4
