@@ -29,7 +29,15 @@ on:
     branches: [ "master", "main" ]
   pull_request:
     branches: [ "master", "main" ]
+
+# Important: Full git history is fetched for setuptools-scm
+steps:
+  - uses: actions/checkout@v4
+    with:
+      fetch-depth: 0  # Required for version detection
 ```
+
+**Note:** The `fetch-depth: 0` is critical for setuptools-scm to determine the version from git tags. Without it, shallow clones will cause version detection errors.
 
 ### 2. PyPI Publishing (`publish-to-pypi.yml`)
 

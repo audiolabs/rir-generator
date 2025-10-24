@@ -194,6 +194,19 @@ git push origin v0.3.0
 
 **Solution:** The fallback version `0.0.0.dev0` is used. This is expected behavior for source distributions.
 
+### Shallow Clone Issues (CI/CD)
+
+**Problem:** Error like `"path" is shallow and may cause errors` or invalid version `0.0.0.dev0.post1`
+
+**Solution:** Ensure full git history is fetched in CI:
+```yaml
+- uses: actions/checkout@v4
+  with:
+    fetch-depth: 0  # Fetch all history for setuptools-scm
+```
+
+This is already configured in the project's GitHub Actions workflows.
+
 ### Version Doesn't Update
 
 **Problem:** Version seems stale after creating new tag
