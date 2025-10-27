@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 0  # Fetch all history for setuptools-scm
       
       - name: Build wheels
-        uses: pypa/cibuildwheel@v2.16.5
+        uses: pypa/cibuildwheel@v3.2.1
         env:
           # Build for Python 3.8-3.12
           CIBW_BUILD: cp38-* cp39-* cp310-* cp311-* cp312-*
