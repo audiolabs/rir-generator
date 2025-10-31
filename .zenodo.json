@@ -1,0 +1,49 @@
+{
+  "title": "rir-generator: Room Impulse Response Generator for Python",
+  "upload_type": "software",
+  "publication_date": "2025-10-27",
+  "creators": [
+    {
+      "name": "Habets, Emanuël A. P.",
+      "affiliation": "International Audio Laboratories Erlangen"
+    },
+    {
+      "name": "Werner, Nils",
+      "affiliation": "International Audio Laboratories Erlangen"
+    }
+  ],
+  "description": "Python- and C-based room impulse response generator for use in convolutional reverb. Official Python port of https://github.com/ehabets/RIR-Generator.",
+  "language": "eng",
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "audio",
+    "acoustics",
+    "room impulse response",
+    "RIR",
+    "reverb",
+    "convolution"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/audiolabs/rir-generator",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://pypi.org/project/rir-generator/",
+      "relation": "isAlternateIdentifier"
+    },
+    {
+      "identifier": "https://github.com/ehabets/RIR-Generator",
+      "relation": "isDerivedFrom",
+      "resource_type": "software"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "International Audio Laboratories Erlangen",
+      "type": "HostingInstitution"
+    }
+  ]
+}
