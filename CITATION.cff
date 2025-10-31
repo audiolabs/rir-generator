@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "rir-generator: Room Impulse Response Generator for Python"
+license: MIT
+authors:
+  - family-names: Habets
+    given-names: Emanuël A. P.
+    affiliation: International Audio Laboratories Erlangen
+  - family-names: Werner
+    given-names: Nils
+    affiliation: International Audio Laboratories Erlangen
+repository-code: "https://github.com/audiolabs/rir-generator"
+url: "https://rir-generator.readthedocs.io"
+doi: 10.5281/zenodo.4133077
