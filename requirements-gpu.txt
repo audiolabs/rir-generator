@@ -1,0 +1,6 @@
+# GPU-accelerated RIR generator — additional requirements
+# Install with:  pip install -r requirements-gpu.txt
+#
+# scipy is already a core dependency of rir-generator.
+# torch is the only extra needed for src/rir_generator/gpu.py.
+torch>=2.0.0
