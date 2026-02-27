@@ -55,6 +55,9 @@ tests = [
     "pytest-cov>=2.0",
     "pytest-black",
 ]
+gpu = [
+    "torch>=2.0.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/audiolabs/rir-generator"
